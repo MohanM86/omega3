@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omega-3.no — Norges største kunnskapsbase om Omega-3</title>
+<meta name="description" content="Alt du trenger å vite om omega-3 fettsyrer. Forskning, helseguider, dosering, kilder og mer.">
+<meta property="og:title" content="Omega-3.no — Norges største kunnskapsbase">
+<meta property="og:description" content="Evidensbasert kunnskap om omega-3 fettsyrer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://omega-3.no">
+<link rel="canonical" href="https://omega-3.no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--d:#060d18;--d2:#0a1525;--d3:#0e1f35;--n:#142c4c;--b7:#1a3f6f;--b6:#1e5a8a;--b5:#2980b9;
+--b4:#4fa3d9;--b3:#7ec8e3;--b2:#a8dcf0;--b1:#ceeaf7;--ice:#e8f4fb;--frost:#f2f9fd;--w:#fff;
+--g:rgba(255,255,255,.04);--gb:rgba(255,255,255,.07);--a:#3da0e3;--ag:rgba(61,160,227,.35);
+--td:#071020;--tm:#3a5068;--tl:#6d8aa0;--tw:rgba(255,255,255,.92);--tw6:rgba(255,255,255,.6);
+--tw4:rgba(255,255,255,.38);--tw2:rgba(255,255,255,.18);
+--fh:'Syne',system-ui,sans-serif;--fd:'Newsreader',Georgia,serif;--fm:'Geist Mono',monospace;--fb:'Syne',system-ui,sans-serif;
+--eo:cubic-bezier(.16,1,.3,1);--sp:cubic-bezier(.34,1.56,.64,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:var(--fb);color:var(--td);background:var(--w);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--b4);color:#fff}
+img{max-width:100%;display:block}
+.ctn{max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,3rem)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+
+/* ========= NAV ========= */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 0;transition:all .5s var(--eo)}
+.nav.s{background:rgba(6,13,24,.88);backdrop-filter:blur(40px) saturate(1.5);-webkit-backdrop-filter:blur(40px) saturate(1.5);padding:.6rem 0;box-shadow:0 1px 0 rgba(255,255,255,.04)}
+.nav__i{display:flex;align-items:center;justify-content:space-between}
+.nav__l{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff;font-weight:700;font-size:1.15rem;letter-spacing:-.02em}
+.nav__lm{width:34px;height:34px;background:linear-gradient(135deg,var(--b4),var(--b3));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 14px var(--ag)}
+.nav__lm svg{width:20px;height:20px}
+.nav__k{display:flex;list-style:none;gap:2.2rem;align-items:center}
+.nav__k a{color:var(--tw4);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.01em;transition:color .3s}
+.nav__k a:hover{color:#fff}
+.nav__h{display:none;background:0;border:0;cursor:pointer;width:30px;height:30px;position:relative}
+.nav__h span{position:absolute;left:3px;width:24px;height:1.5px;background:#fff;transition:all .3s var(--eo)}
+.nav__h span:nth-child(1){top:9px}.nav__h span:nth-child(2){top:15px}.nav__h span:nth-child(3){top:21px}
+.nav__h.o span:nth-child(1){top:15px;transform:rotate(45deg)}.nav__h.o span:nth-child(2){opacity:0}.nav__h.o span:nth-child(3){top:15px;transform:rotate(-45deg)}
+
+/* ========= HERO ========= */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center;background:var(--d)}
+.hero__bg{position:absolute;inset:0}
+.hero__mesh{position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 50% 35%,rgba(61,160,227,.1) 0%,transparent 70%),radial-gradient(ellipse 45% 40% at 25% 75%,rgba(126,200,227,.06) 0%,transparent 55%),radial-gradient(ellipse 35% 30% at 80% 55%,rgba(61,160,227,.05) 0%,transparent 50%)}
+.hero__grid{position:absolute;inset:0;background-image:linear-gradient(var(--tw2) 1px,transparent 1px),linear-gradient(90deg,var(--tw2) 1px,transparent 1px);background-size:100px 100px;mask-image:radial-gradient(ellipse 55% 55% at 50% 50%,black,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 55% 55% at 50% 50%,black,transparent 70%);opacity:.3}
+.hero__orb{position:absolute;border-radius:50%;filter:blur(100px);animation:orbF 25s ease-in-out infinite}
+.hero__orb--a{width:600px;height:600px;background:radial-gradient(circle,rgba(61,160,227,.13),transparent 70%);top:5%;left:10%}
+.hero__orb--b{width:450px;height:450px;background:radial-gradient(circle,rgba(126,200,227,.09),transparent 70%);bottom:5%;right:5%;animation-delay:-9s}
+@keyframes orbF{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-25px) scale(1.06)}66%{transform:translate(-30px,20px) scale(.94)}}
+.hero__c{position:relative;z-index:2;max-width:900px;padding:10rem 2rem 8rem}
+.hero__ey{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--fm);font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--b3);margin-bottom:2.5rem;opacity:0;animation:hUp 1s var(--eo) .2s forwards}
+.hero__el{width:28px;height:1px;background:var(--b4)}
+.hero__t{font-family:var(--fh);font-weight:800;font-size:clamp(3.2rem,7.5vw,6.5rem);line-height:1;letter-spacing:-.045em;color:#fff;margin-bottom:1.5rem;opacity:0;animation:hUp 1s var(--eo) .4s forwards}
+.hero__ta{background:linear-gradient(135deg,var(--b3),var(--b4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero__p{font-family:var(--fd);font-size:clamp(1.05rem,2vw,1.35rem);font-weight:300;color:var(--tw6);max-width:600px;margin:0 auto 3rem;line-height:1.75;font-style:italic;opacity:0;animation:hUp 1s var(--eo) .55s forwards}
+.hero__btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:hUp 1s var(--eo) .7s forwards}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 2.4rem;border-radius:100px;font-family:var(--fh);font-size:.88rem;font-weight:600;text-decoration:none;letter-spacing:.01em;transition:all .4s var(--eo);cursor:pointer;border:0;position:relative;overflow:hidden}
+.btn svg{width:15px;height:15px;transition:transform .3s}
+.btn:hover svg{transform:translateX(3px)}
+.btn--w{background:#fff;color:var(--d)}
+.btn--w:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(255,255,255,.2)}
+.btn--o{background:0;color:#fff;border:1px solid var(--tw2)}
+.btn--o:hover{background:var(--g);border-color:var(--tw4);transform:translateY(-2px)}
+.hero__scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:hUp 1s var(--eo) 1.2s forwards}
+.hero__scroll span{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--tw4);font-weight:500}
+.hero__sl{width:1px;height:44px;position:relative;overflow:hidden;background:var(--tw2)}
+.hero__sl::after{content:'';position:absolute;top:-44px;left:0;width:1px;height:44px;background:linear-gradient(to bottom,transparent,var(--b4));animation:scrl 2.2s ease-in-out infinite}
+@keyframes scrl{0%{top:-44px}50%,100%{top:44px}}
+@keyframes hUp{from{opacity:0;transform:translateY(45px)}to{opacity:1;transform:translateY(0)}}
+
+/* ========= STATS MARQUEE ========= */
+.stbar{background:var(--d2);border-bottom:1px solid rgba(255,255,255,.04);padding:1.6rem 0;overflow:hidden}
+.stbar__i{display:flex;justify-content:center;gap:clamp(2rem,5vw,4.5rem);flex-wrap:wrap;align-items:center}
+.stp{display:flex;align-items:center;gap:.7rem}
+.stp__n{font-family:var(--fh);font-weight:800;font-size:1.7rem;letter-spacing:-.03em;color:var(--b3)}
+.stp__l{font-size:.78rem;color:var(--tw4);line-height:1.3;font-weight:400}
+.stp__d{width:1px;height:36px;background:rgba(255,255,255,.06)}
+
+/* ========= SECTIONS ========= */
+.sec{padding:clamp(5rem,10vw,9rem) 0;position:relative}
+.sec--s{background:var(--frost)}.sec--d{background:var(--d);color:var(--tw)}
+.sec--g{background:linear-gradient(180deg,var(--d) 0%,var(--d2) 100%);color:var(--tw)}
+.sec--ice{background:linear-gradient(180deg,var(--frost) 0%,var(--w) 100%)}
+.sec__lb{font-family:var(--fm);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--b5);font-weight:500;margin-bottom:1rem}
+.sec--d .sec__lb,.sec--g .sec__lb{color:var(--b3)}
+.sec__hd{font-family:var(--fh);font-weight:800;font-size:clamp(2.4rem,5vw,4rem);letter-spacing:-.04em;line-height:1.06;margin-bottom:1.2rem}
+.sec__hd em{font-family:var(--fd);font-weight:400;font-style:italic}
+.sec__ds{font-family:var(--fd);font-size:1.08rem;font-weight:300;color:var(--tm);max-width:640px;line-height:1.8;font-style:italic}
+.sec--d .sec__ds,.sec--g .sec__ds{color:var(--tw6)}
+.sec__top{margin-bottom:clamp(3rem,5vw,5rem)}
+.sec__top--c{text-align:center;display:flex;flex-direction:column;align-items:center}
+
+/* ========= REVEAL ========= */
+.r{opacity:0;transform:translateY(50px);transition:opacity .9s var(--eo),transform .9s var(--eo)}
+.r.v{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.4s}.rd5{transition-delay:.5s}
+
+/* ========= INTRO ========= */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,5vw,6rem);align-items:center}
+.intro__vis{position:relative;background:linear-gradient(160deg,var(--ice),var(--w));border-radius:28px;padding:3rem;border:1px solid rgba(0,0,0,.04);display:flex;align-items:center;justify-content:center;min-height:440px;overflow:hidden}
+.intro__vis::before{content:'';position:absolute;inset:0;border-radius:28px;background:radial-gradient(circle at 30% 30%,rgba(61,160,227,.05),transparent 60%)}
+.intro__vis svg{width:100%;max-width:380px;position:relative;z-index:1}
+.intro__bd h2{margin-bottom:1.5rem}
+.intro__bd p{font-size:1.02rem;color:var(--tm);margin-bottom:1.2rem;font-weight:300;line-height:1.85}
+.intro__bd p:first-of-type::first-letter{font-family:var(--fd);font-size:4rem;float:left;line-height:.82;margin-right:.5rem;margin-top:.08rem;color:var(--b5);font-weight:600}
+
+.cbox{background:linear-gradient(135deg,var(--d),var(--d2));border-radius:16px;padding:1.8rem 2rem;display:flex;align-items:flex-start;gap:1.2rem;margin-top:2rem;border:1px solid rgba(255,255,255,.04)}
+.cbox__ic{flex-shrink:0;width:44px;height:44px;background:rgba(61,160,227,.12);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.cbox__ic svg{width:22px;height:22px}
+.cbox__lb{font-family:var(--fm);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--b3);font-weight:500;margin-bottom:.35rem}
+.cbox__tx{color:var(--tw6);font-size:.9rem;line-height:1.75;font-weight:300}
+
+/* ========= TYPES ========= */
+.trow{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.tc{position:relative;background:var(--w);border-radius:24px;padding:2.5rem;border:1px solid rgba(0,0,0,.04);transition:all .5s var(--eo);overflow:hidden}
+.tc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--b5),var(--b3));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--eo)}
+.tc:hover{transform:translateY(-8px);box-shadow:0 30px 80px -20px rgba(6,13,24,.1)}.tc:hover::before{transform:scaleX(1)}
+.tc__ic{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+.tc__ic svg{width:28px;height:28px}
+.tc__ic--a{background:rgba(41,128,185,.08)}.tc__ic--a svg{color:var(--b5)}
+.tc__ic--b{background:rgba(126,200,227,.1)}.tc__ic--b svg{color:var(--b3)}
+.tc__ic--c{background:rgba(26,63,111,.07)}.tc__ic--c svg{color:var(--b7)}
+.tc__cd{font-family:var(--fm);font-size:.68rem;color:var(--tl);letter-spacing:.06em;margin-bottom:.2rem}
+.tc__nm{font-family:var(--fh);font-weight:700;font-size:1.5rem;letter-spacing:-.02em;margin-bottom:.2rem}
+.tc__fl{font-family:var(--fd);font-style:italic;font-size:.85rem;color:var(--tl);margin-bottom:1.2rem}
+.tc__p{font-size:.92rem;color:var(--tm);line-height:1.8;margin-bottom:1.5rem;font-weight:300}
+.tc__sr{font-size:.8rem;color:var(--tl);padding-top:1.2rem;border-top:1px solid rgba(0,0,0,.04);line-height:1.6}
+.tc__sr strong{color:var(--tm);font-weight:500}
+
+/* ========= MEGA FEATURE (BENEFITS) ========= */
+.bwrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.bc{background:var(--g);border:1px solid var(--gb);border-radius:20px;padding:2.2rem;transition:all .5s var(--eo);position:relative;overflow:hidden}
+.bc::after{content:'';position:absolute;inset:0;border-radius:20px;background:radial-gradient(circle at 30% 0%,rgba(61,160,227,.05),transparent 60%);opacity:0;transition:opacity .4s}
+.bc:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);transform:translateY(-5px)}.bc:hover::after{opacity:1}
+.bc__ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem;position:relative;z-index:1}
+.bc__ic svg{width:26px;height:26px}
+.bc__ic--hr{background:rgba(220,80,80,.1)}.bc__ic--hr svg{color:#dc5050}
+.bc__ic--br{background:rgba(61,160,227,.1)}.bc__ic--br svg{color:var(--b4)}
+.bc__ic--ey{background:rgba(80,190,170,.1)}.bc__ic--ey svg{color:#50beaa}
+.bc__ic--jt{background:rgba(200,160,80,.1)}.bc__ic--jt svg{color:#c8a050}
+.bc__ic--mn{background:rgba(140,100,200,.1)}.bc__ic--mn svg{color:#8c64c8}
+.bc__ic--sk{background:rgba(100,180,220,.1)}.bc__ic--sk svg{color:#64b4dc}
+.bc__ic--pr{background:rgba(80,200,120,.1)}.bc__ic--pr svg{color:#50c878}
+.bc__ic--im{background:rgba(180,120,200,.1)}.bc__ic--im svg{color:#b478c8}
+.bc__ic--mt{background:rgba(160,200,80,.1)}.bc__ic--mt svg{color:#a0c850}
+.bc__tt{font-family:var(--fh);font-weight:600;font-size:1.12rem;color:#fff;margin-bottom:.5rem;position:relative;z-index:1}
+.bc__tx{font-size:.88rem;color:var(--tw6);line-height:1.8;font-weight:300;position:relative;z-index:1}
+.bc__tg{display:inline-flex;align-items:center;gap:.3rem;margin-top:.8rem;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .7rem;border-radius:100px;position:relative;z-index:1}
+.tg--s{background:rgba(80,190,170,.12);color:#50beaa}.tg--m{background:rgba(200,160,80,.12);color:#dab860}.tg--e{background:rgba(100,180,220,.12);color:var(--b3)}
+
+/* ========= FOOD SOURCES ========= */
+.sgrid{display:grid;grid-template-columns:1.3fr .7fr;gap:4rem;align-items:start}
+.stbl{width:100%;border-collapse:separate;border-spacing:0}
+.stbl thead th{text-align:left;padding:0 .5rem 1rem;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tl);font-weight:500;border-bottom:2px solid rgba(0,0,0,.05)}
+.stbl tbody tr{transition:background .2s}.stbl tbody tr:hover{background:var(--ice)}
+.stbl td{padding:.9rem .5rem;border-bottom:1px solid rgba(0,0,0,.03);font-size:.9rem;color:var(--tm);font-weight:300}
+.stbl td:first-child{font-weight:500;color:var(--td)}
+.bar{width:100%;height:5px;background:rgba(0,0,0,.03);border-radius:3px;overflow:hidden}
+.bar__f{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--b5),var(--b3));transition:width 1.4s var(--eo);width:0}
+.bar__f--p{background:linear-gradient(90deg,var(--b7),var(--b5))}
+.ssb{position:sticky;top:7rem;display:flex;flex-direction:column;gap:1.5rem}
+.stip{border-radius:18px;padding:2rem;border:1px solid rgba(0,0,0,.04);background:var(--w)}
+.stip__ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.stip__ic svg{width:20px;height:20px}
+.stip__ic--a{background:rgba(61,160,227,.08)}.stip__ic--a svg{color:var(--b5)}
+.stip__ic--b{background:rgba(80,190,170,.08)}.stip__ic--b svg{color:#50beaa}
+.stip__ic--c{background:rgba(140,100,200,.08)}.stip__ic--c svg{color:#8c64c8}
+.stip__tt{font-family:var(--fh);font-weight:600;font-size:1rem;margin-bottom:.5rem}
+.stip__tx{font-size:.85rem;color:var(--tm);line-height:1.75;font-weight:300}
+
+/* ========= DOSAGE ========= */
+.dgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.dc{background:var(--w);border-radius:24px;padding:2.5rem;border:1px solid rgba(0,0,0,.04);transition:all .4s var(--eo)}
+.dc:hover{transform:translateY(-5px);box-shadow:0 20px 60px -15px rgba(6,13,24,.08)}
+.dc__ic{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--ice),var(--w));border:1px solid rgba(0,0,0,.03);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
+.dc__ic svg{width:24px;height:24px;color:var(--b5)}
+.dc__grp{font-family:var(--fh);font-weight:700;font-size:1.15rem;letter-spacing:-.01em;margin-bottom:.15rem}
+.dc__age{font-size:.8rem;color:var(--tl);margin-bottom:1.2rem}
+.dc__amt{font-family:var(--fh);font-weight:800;font-size:2.6rem;letter-spacing:-.04em;background:linear-gradient(135deg,var(--b6),var(--b4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+.dc__u{font-size:.82rem;font-weight:400;-webkit-text-fill-color:var(--tl)}
+.dc__dt{font-size:.86rem;color:var(--tm);margin-top:.8rem;line-height:1.75;font-weight:300}
+.dc__w{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(0,0,0,.04);font-size:.78rem;color:var(--tl);display:flex;align-items:flex-start;gap:.5rem;line-height:1.5}
+.dc__w svg{flex-shrink:0;width:15px;height:15px;color:var(--b4);margin-top:1px}
+
+/* ========= HOW IT WORKS (NEW) ========= */
+.hw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;counter-reset:hw}
+.hw{background:var(--w);border-radius:20px;padding:2rem;border:1px solid rgba(0,0,0,.04);position:relative;counter-increment:hw;transition:all .4s var(--eo)}
+.hw:hover{transform:translateY(-5px);box-shadow:0 20px 60px -15px rgba(6,13,24,.08)}
+.hw::before{content:counter(hw,decimal-leading-zero);font-family:var(--fh);font-weight:800;font-size:3rem;line-height:1;letter-spacing:-.03em;color:rgba(61,160,227,.08);position:absolute;top:1.2rem;right:1.5rem}
+.hw__ic{width:44px;height:44px;border-radius:12px;background:rgba(61,160,227,.06);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.hw__ic svg{width:22px;height:22px;color:var(--b5)}
+.hw__tt{font-family:var(--fh);font-weight:700;font-size:1rem;margin-bottom:.4rem}
+.hw__tx{font-size:.85rem;color:var(--tm);line-height:1.7;font-weight:300}
+
+/* ========= BIG NUMBER BANNER ========= */
+.bnb{background:var(--d);padding:clamp(3rem,6vw,5rem) 0;overflow:hidden;position:relative}
+.bnb::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(61,160,227,.06),transparent)}
+.bnb__row{display:flex;justify-content:center;gap:clamp(2rem,5vw,5rem);flex-wrap:wrap;position:relative}
+.bn{text-align:center}
+.bn__n{font-family:var(--fh);font-weight:800;font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.04em;background:linear-gradient(135deg,var(--b3),var(--b4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.bn__l{font-size:.78rem;color:var(--tw4);margin-top:.3rem;font-weight:300;max-width:150px}
+.bn__d{width:1px;height:60px;background:rgba(255,255,255,.06);align-self:center}
+
+/* ========= OMEGA-3 INDEX (NEW) ========= */
+.idx-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,5vw,6rem);align-items:center}
+.idx__chart{position:relative;width:100%;max-width:400px;margin:0 auto}
+.idx__ring{transform:rotate(-90deg)}
+.idx__ring-bg{fill:none;stroke:rgba(61,160,227,.1);stroke-width:8}
+.idx__ring-fill{fill:none;stroke:url(#ringGrad);stroke-width:8;stroke-linecap:round;stroke-dasharray:283;stroke-dashoffset:283;transition:stroke-dashoffset 2s var(--eo)}
+.idx__chart.animated .idx__ring-fill{stroke-dashoffset:113}
+.idx__center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.idx__pct{font-family:var(--fh);font-weight:800;font-size:3.5rem;letter-spacing:-.04em;color:var(--b4)}
+.idx__pctl{font-size:.82rem;color:var(--tl);font-weight:300}
+.idx__body h2{margin-bottom:1.5rem}
+.idx__body p{font-size:1rem;color:var(--tm);margin-bottom:1rem;font-weight:300;line-height:1.85}
+.idx__scale{margin-top:2rem;background:var(--ice);border-radius:14px;padding:1.5rem;border:1px solid rgba(0,0,0,.04)}
+.idx__scale-bar{height:8px;border-radius:4px;background:linear-gradient(90deg,#dc5050 0%,#dab860 40%,#50beaa 100%);margin-bottom:.8rem}
+.idx__scale-labels{display:flex;justify-content:space-between;font-size:.72rem;color:var(--tl);font-weight:500}
+
+/* ========= TIMELINE ========= */
+.tl{max-width:820px;margin:0 auto;position:relative;padding-left:3rem}
+.tl::before{content:'';position:absolute;left:11px;top:0;bottom:0;width:1px;background:rgba(255,255,255,.06)}
+.tli{position:relative;margin-bottom:3.2rem}
+.tli::before{content:'';position:absolute;left:-3rem;top:8px;width:9px;height:9px;border-radius:50%;background:var(--b4);box-shadow:0 0 0 4px rgba(61,160,227,.12),0 0 20px rgba(61,160,227,.15);margin-left:7px}
+.tli__y{font-family:var(--fm);font-size:.75rem;color:var(--b3);margin-bottom:.25rem;font-weight:500}
+.tli__tt{font-family:var(--fh);font-weight:600;font-size:1.12rem;color:#fff;margin-bottom:.4rem}
+.tli__tx{font-size:.88rem;color:var(--tw6);line-height:1.8;font-weight:300}
+
+/* ========= MYTHS ========= */
+.mlist{max-width:820px;margin:0 auto}
+.mi{border-bottom:1px solid rgba(0,0,0,.05)}
+.mi:first-child{border-top:1px solid rgba(0,0,0,.05)}
+.mi__tg{display:flex;align-items:center;gap:1.1rem;width:100%;background:0;border:0;cursor:pointer;text-align:left;padding:1.8rem 0;font-family:var(--fb)}
+.mi__bd{flex-shrink:0;font-family:var(--fm);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;background:#dc5050;color:#fff}
+.mi__q{flex:1;font-family:var(--fh);font-weight:600;font-size:1.05rem;color:var(--td);letter-spacing:-.01em}
+.mi__ch{flex-shrink:0;width:18px;height:18px;color:var(--tl);transition:transform .4s var(--eo)}
+.mi.o .mi__ch{transform:rotate(180deg)}
+.mi__an{max-height:0;overflow:hidden;transition:max-height .5s var(--eo),padding .4s}
+.mi.o .mi__an{max-height:500px;padding-bottom:1.8rem}
+.mi__ai{padding-left:calc(.6rem*2 + 1.1rem + 2.5rem)}
+.mi__fb{display:inline-block;font-family:var(--fm);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;background:#50beaa;color:#fff;margin-bottom:.5rem}
+.mi__at{font-size:.9rem;color:var(--tm);line-height:1.8;font-weight:300}
+
+/* ========= BIOAVAILABILITY (NEW) ========= */
+.bio-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.biocard{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:2rem;text-align:center;transition:all .4s var(--eo)}
+.biocard:hover{background:rgba(255,255,255,.06);transform:translateY(-4px)}
+.biocard__ic{width:60px;height:60px;border-radius:50%;background:rgba(61,160,227,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem}
+.biocard__ic svg{width:28px;height:28px;color:var(--b3)}
+.biocard__nm{font-family:var(--fh);font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:.2rem}
+.biocard__tp{font-family:var(--fm);font-size:.68rem;color:var(--b3);letter-spacing:.06em;margin-bottom:1rem}
+.biocard__bar{width:100%;height:6px;border-radius:3px;background:rgba(255,255,255,.06);margin-bottom:.6rem;overflow:hidden}
+.biocard__bf{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--b5),var(--b3));transition:width 1.4s var(--eo);width:0}
+.biocard__pct{font-family:var(--fh);font-weight:800;font-size:2rem;color:var(--b3);letter-spacing:-.03em}
+.biocard__pl{font-size:.78rem;color:var(--tw4);font-weight:300}
+.biocard__desc{font-size:.82rem;color:var(--tw6);line-height:1.7;margin-top:1rem;font-weight:300}
+
+/* ========= SUPPLEMENT GUIDE ========= */
+.sgr{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.sc{background:var(--g);border:1px solid var(--gb);border-radius:20px;padding:2.2rem;transition:all .4s var(--eo)}
+.sc:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);transform:translateY(-4px)}
+.sc__ic{width:48px;height:48px;border-radius:14px;background:rgba(61,160,227,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
+.sc__ic svg{width:24px;height:24px;color:var(--b3)}
+.sc__nm{font-family:var(--fh);font-weight:600;font-size:1.15rem;color:#fff;margin-bottom:.2rem}
+.sc__tp{font-family:var(--fm);font-size:.68rem;color:var(--b3);letter-spacing:.06em;margin-bottom:1rem}
+.sc__dx{font-size:.86rem;color:var(--tw6);line-height:1.8;font-weight:300;margin-bottom:1rem}
+.sc__pro,.sc__con{font-size:.8rem;line-height:1.6;margin-bottom:.25rem;display:flex;align-items:flex-start;gap:.5rem}
+.sc__pro svg,.sc__con svg{flex-shrink:0;width:14px;height:14px;margin-top:2px}
+.sc__pro{color:#50beaa}.sc__pro svg{color:#50beaa}
+.sc__con{color:rgba(220,80,80,.65)}.sc__con svg{color:rgba(220,80,80,.65)}
+.ctbl-w{margin-top:3rem;border-radius:20px;overflow:hidden;border:1px solid var(--gb)}
+.ctbl{width:100%;border-collapse:collapse;min-width:650px}
+.ctbl-w{overflow-x:auto}
+.ctbl thead{background:rgba(255,255,255,.03)}
+.ctbl th{padding:.9rem 1.2rem;text-align:left;font-family:var(--fm);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tw4);font-weight:500;border-bottom:1px solid var(--gb)}
+.ctbl td{padding:.8rem 1.2rem;font-size:.85rem;color:var(--tw6);font-weight:300;border-bottom:1px solid rgba(255,255,255,.03)}
+.ctbl td strong{color:var(--tw);font-weight:500}
+.ctbl tbody tr:hover{background:rgba(255,255,255,.02)}
+.ctbl .hl{color:var(--b3);font-weight:500}
+
+/* ========= SAFETY (NEW) ========= */
+.safety-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.saf{background:var(--w);border-radius:18px;padding:2rem;border:1px solid rgba(0,0,0,.04);transition:all .3s var(--eo)}
+.saf:hover{transform:translateY(-3px);box-shadow:0 15px 40px -10px rgba(6,13,24,.06)}
+.saf__ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.saf__ic svg{width:22px;height:22px}
+.saf__ic--r{background:rgba(220,80,80,.06)}.saf__ic--r svg{color:#dc5050}
+.saf__ic--y{background:rgba(200,160,80,.08)}.saf__ic--y svg{color:#c8a050}
+.saf__ic--g{background:rgba(80,190,170,.06)}.saf__ic--g svg{color:#50beaa}
+.saf__tt{font-family:var(--fh);font-weight:600;font-size:.98rem;margin-bottom:.5rem}
+.saf__tx{font-size:.85rem;color:var(--tm);line-height:1.7;font-weight:300}
+
+/* ========= FAQ ========= */
+.fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1000px;margin:0 auto}
+.fq{background:var(--w);border-radius:16px;padding:1.8rem;border:1px solid rgba(0,0,0,.04);transition:all .3s var(--eo)}
+.fq:hover{transform:translateY(-3px);box-shadow:0 12px 35px -10px rgba(6,13,24,.06)}
+.fq__q{font-family:var(--fh);font-weight:600;font-size:.96rem;margin-bottom:.5rem;letter-spacing:-.01em}
+.fq__a{font-size:.86rem;color:var(--tm);line-height:1.8;font-weight:300}
+
+/* ========= CTA ========= */
+.cta{text-align:center;padding:clamp(5rem,10vw,9rem) 0;background:var(--d);position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 40% 40% at 50% 50%,rgba(61,160,227,.06),transparent)}
+.cta__t{font-family:var(--fh);font-weight:800;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.03em;color:#fff;margin-bottom:1rem;position:relative}
+.cta__p{font-family:var(--fd);font-size:1.05rem;color:var(--tw6);max-width:520px;margin:0 auto 2.5rem;position:relative;font-weight:300;line-height:1.8;font-style:italic}
+
+/* ========= FOOTER ========= */
+.ft{background:var(--d);border-top:1px solid rgba(255,255,255,.03);padding:4rem 0 2.5rem}
+.ft__g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft__bt{font-size:.82rem;color:var(--tw4);line-height:1.7;margin-top:.7rem;font-weight:300}
+.ft__c h4{font-family:var(--fm);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tw4);font-weight:500;margin-bottom:1.2rem}
+.ft__c a{display:block;color:var(--tw4);text-decoration:none;font-size:.85rem;margin-bottom:.5rem;font-weight:300;transition:color .2s}
+.ft__c a:hover{color:var(--tw)}
+.ft__b{padding-top:2rem;border-top:1px solid rgba(255,255,255,.03);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft__cp{font-size:.75rem;color:var(--tw4);font-weight:300}
+.ft__dis{font-size:.7rem;color:rgba(255,255,255,.18);max-width:450px;text-align:right;line-height:1.5;font-weight:300}
+
+/* ========= BACK TO TOP ========= */
+.btt{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--b5);color:#fff;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s var(--eo);z-index:999;box-shadow:0 4px 24px var(--ag)}
+.btt.vi{opacity:1;visibility:visible}.btt:hover{transform:translateY(-3px);background:var(--b4)}
+.btt svg{width:16px;height:16px}
+
+/* ========= RESPONSIVE ========= */
+@media(max-width:1024px){.bwrap,.safety-grid{grid-template-columns:repeat(2,1fr)}.hw-grid{grid-template-columns:repeat(2,1fr)}.bio-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+.nav__k{display:none}.nav__h{display:block}
+.nav__k.op{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(6,13,24,.97);backdrop-filter:blur(30px);padding:2rem 1.5rem;gap:1.2rem}
+.intro,.idx-split{grid-template-columns:1fr}.trow,.bwrap,.sgrid,.dgrid,.sgr,.fgrid,.safety-grid,.hw-grid,.bio-row{grid-template-columns:1fr}
+.ft__g{grid-template-columns:1fr 1fr}.hero__btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav"><div class="ctn"><div class="nav__i">
+<a href="#" class="nav__l"><div class="nav__lm"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M3 17C6 12 9 9 12 8c3-1 6 0 9 4"/><path d="M3 14C6 10 10 7 13 7c3 0 5 1 8 4" opacity=".5"/></svg></div>Omega-3.no</a>
+<ul class="nav__k" id="nk">
+<li><a href="#hva-er">Hva er det</a></li><li><a href="#typer">Typer</a></li><li><a href="#helse">Helse</a></li><li><a href="#kilder">Kilder</a></li>
+<li><a href="#dosering">Dosering</a></li><li><a href="#indeks">Indeks</a></li><li><a href="#forskning">Forskning</a></li><li><a href="#bio">Biotilgjengelighet</a></li>
+<li><a href="#myter">Myter</a></li><li><a href="#tilskudd">Tilskudd</a></li><li><a href="#sikkerhet">Sikkerhet</a></li><li><a href="#faq">FAQ</a></li>
+</ul>
+<button class="nav__h" id="hb" aria-label="Meny"><span></span><span></span><span></span></button>
+</div></div></nav>
+
+<!-- HERO -->
+<section class="hero" id="topp">
+<div class="hero__bg"><div class="hero__mesh"></div><div class="hero__grid"></div><div class="hero__orb hero__orb--a"></div><div class="hero__orb hero__orb--b"></div></div>
+<div class="hero__c">
+<div class="hero__ey"><span class="hero__el"></span>Norges fremste kunnskapsplattform<span class="hero__el"></span></div>
+<h1 class="hero__t">Vitenskap bak<br><span class="hero__ta">Omega-3</span></h1>
+<p class="hero__p">Evidensbasert kunnskap om omega-3 fettsyrer — fra molekylbiologi til klinisk praksis. Oppdatert forskning, uavhengige analyser og praktiske guider.</p>
+<div class="hero__btns">
+<a href="#hva-er" class="btn btn--w">Utforsk plattformen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+<a href="#dosering" class="btn btn--o">Finn riktig dosering</a>
+</div>
+</div>
+<div class="hero__scroll"><span>Scroll</span><div class="hero__sl"></div></div>
+</section>
+
+<!-- STATS -->
+<div class="stbar"><div class="ctn"><div class="stbar__i">
+<div class="stp"><div class="stp__n" data-count="15">0</div><div class="stp__l">Kunnskaps-<br>seksjoner</div></div><div class="stp__d"></div>
+<div class="stp"><div class="stp__n" data-count="50">0</div><div class="stp__l">Forsknings-<br>referanser</div></div><div class="stp__d"></div>
+<div class="stp"><div class="stp__n">100%</div><div class="stp__l">Uavhengig &<br>evidensbasert</div></div><div class="stp__d"></div>
+<div class="stp"><div class="stp__n">2026</div><div class="stp__l">Oppdatert<br>kunnskapsbase</div></div>
+</div></div></div>
+
+<!-- HOW OMEGA-3 WORKS -->
+<section class="sec sec--ice" id="mekanisme">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Virkningsmekanisme</div><h2 class="sec__hd">Hvordan omega-3 virker <em>i kroppen</em></h2><p class="sec__ds">Fra inntak til biologisk effekt — fire trinn som forklarer hvorfor omega-3 er essensielt.</p></div>
+<div class="hw-grid">
+<div class="hw r"><div class="hw__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M8 12l3 3 5-5"/></svg></div><h3 class="hw__tt">Absorpsjon</h3><p class="hw__tx">Omega-3 frigjøres fra maten i tynntarmen ved hjelp av lipaser og absorberes som frie fettsyrer og monoglycerider inn i tarmcellene.</p></div>
+<div class="hw r rd1"><div class="hw__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><path d="M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" opacity=".4"/></svg></div><h3 class="hw__tt">Transport</h3><p class="hw__tx">EPA og DHA transporteres i blodet via lipoproteiner (chylomikroner) til lever, hjerte, hjerne og andre vev.</p></div>
+<div class="hw r rd2"><div class="hw__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12h8M12 8v8" opacity=".5"/></svg></div><h3 class="hw__tt">Inkorporering</h3><p class="hw__tx">Fettsyrene bygges inn i cellemembranene, der de påvirker membranfluiditet, signaltransduksjon og genekspresjon.</p></div>
+<div class="hw r rd3"><div class="hw__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8"/></svg></div><h3 class="hw__tt">Biologisk effekt</h3><p class="hw__tx">EPA og DHA omdannes til resolviner, protektiner og maresiner — kraftige antiinflammatoriske signalmolekyler som aktivt løser betennelse.</p></div>
+</div>
+</div></section>
+
+<!-- WHAT IS OMEGA-3 -->
+<section class="sec" id="hva-er">
+<div class="ctn"><div class="intro">
+<div class="intro__vis r">
+<svg viewBox="0 0 380 310" fill="none">
+<text x="190" y="28" text-anchor="middle" font-family="Syne,sans-serif" font-size="12" fill="#2980b9" font-weight="600" letter-spacing=".15em" opacity=".45">OMEGA-3 FETTSYRE</text>
+<g transform="translate(35,70)"><path d="M0,100 Q15,85 30,80 Q45,75 60,100 Q75,125 90,80 Q105,35 120,100 Q135,165 150,80 Q165,0 180,100 Q195,200 210,80 Q225,0 240,100 Q255,150 270,80" stroke="url(#cg)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M60,98 Q75,60 90,78" stroke="#dc5050" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 3" opacity=".7"/>
+<path d="M120,98 Q135,60 150,78" stroke="#dc5050" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 3" opacity=".7"/>
+<path d="M180,98 Q195,60 210,78" stroke="#dc5050" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 3" opacity=".7"/>
+<g opacity=".4"><circle cx="0" cy="100" r="5" fill="#4fa3d9"/><circle cx="30" cy="80" r="5" fill="#4fa3d9"/><circle cx="60" cy="100" r="5" fill="#4fa3d9"/><circle cx="90" cy="80" r="5" fill="#4fa3d9"/><circle cx="120" cy="100" r="5" fill="#4fa3d9"/><circle cx="150" cy="80" r="5" fill="#4fa3d9"/><circle cx="180" cy="100" r="5" fill="#4fa3d9"/><circle cx="210" cy="80" r="5" fill="#4fa3d9"/><circle cx="240" cy="100" r="5" fill="#4fa3d9"/><circle cx="270" cy="80" r="5" fill="#4fa3d9"/></g>
+<rect x="256" y="58" rx="6" width="36" height="20" fill="rgba(41,128,185,.06)" stroke="rgba(41,128,185,.15)" stroke-width="1"/>
+<text x="274" y="72" text-anchor="middle" font-family="Geist Mono,monospace" font-size="9" fill="#2980b9">COOH</text>
+<text x="0" y="130" text-anchor="middle" font-family="Geist Mono,monospace" font-size="9" fill="#7ec8e3">ω</text>
+<text x="274" y="50" text-anchor="middle" font-family="Geist Mono,monospace" font-size="9" fill="#7ec8e3">α</text></g>
+<g transform="translate(45,235)"><line x1="0" y1="8" x2="22" y2="8" stroke="url(#cg)" stroke-width="2.5" stroke-linecap="round"/><text x="30" y="12" font-size="10.5" fill="#6d8aa0" font-family="Syne,sans-serif" font-weight="300">Karbonkjede</text>
+<line x1="150" y1="8" x2="172" y2="8" stroke="#dc5050" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 3"/><text x="180" y="12" font-size="10.5" fill="#6d8aa0" font-family="Syne,sans-serif" font-weight="300">Dobbeltbinding</text></g>
+<defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2980b9"/><stop offset="100%" stop-color="#7ec8e3"/></linearGradient></defs>
+</svg>
+</div>
+<div class="intro__bd r rd2">
+<div class="sec__lb">Grunnleggende kunnskap</div>
+<h2 class="sec__hd">Hva er <em>Omega-3?</em></h2>
+<p>Omega-3 fettsyrer er en familie av flerumettede fettsyrer som er livsviktige for kroppen vår. Navnet refererer til posisjonen av den første dobbeltbindingen — tre karbonatomer fra omega-enden av fettsyrekjeden.</p>
+<p>Kroppen kan ikke produsere omega-3 på egen hånd. Det gjør dem til <strong>essensielle fettsyrer</strong> — vi må få dem gjennom kosten. De spiller en avgjørende rolle for cellemembranenes struktur, immunforsvaret, nervesystemet og hjerte-kar-systemet.</p>
+<div class="cbox">
+<div class="cbox__ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ec8e3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>
+<div><div class="cbox__lb">Visste du</div><div class="cbox__tx">Norge har brukt tran som medisin siden 1700-tallet. I dag vet vi at det er omega-3-fettsyrene EPA og DHA som gir de dokumenterte helseeffektene — ikke bare vitamin D som man lenge trodde.</div></div>
+</div>
+</div>
+</div></div></section>
+
+<!-- THREE TYPES -->
+<section class="sec sec--s" id="typer">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">De tre hovedtypene</div><h2 class="sec__hd">EPA, DHA og <em>ALA</em></h2><p class="sec__ds">Tre fettsyrer med fundamentalt ulike roller. To fra havet, én fra planter — hver med unike biologiske funksjoner.</p></div>
+<div class="trow">
+<div class="tc r">
+<div class="tc__ic tc__ic--a"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="10"/><path d="M14 4c3 2 5 6 5 10s-2 8-5 10"/><path d="M4 14h20"/><circle cx="22" cy="6" r="2.5" fill="currentColor" opacity=".15"/></svg></div>
+<div class="tc__cd">EPA · 20:5(n-3)</div><h3 class="tc__nm">EPA</h3><div class="tc__fl">Eikosapentaensyre</div>
+<p class="tc__p">Kraftig betennelsesdempende. Produserer eikosanoider — signalmolekyler som regulerer betennelse, blodtrykk og immunrespons. Viktigst for hjertehelse og stemningsregulering.</p>
+<div class="tc__sr"><strong>Kilder:</strong> Laks, makrell, sild, tran, krillolje</div>
+</div>
+<div class="tc r rd1">
+<div class="tc__ic tc__ic--b"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v4M14 22v4M2 14h4M22 14h4"/><circle cx="14" cy="14" r="8"/><circle cx="14" cy="14" r="3"/></svg></div>
+<div class="tc__cd">DHA · 22:6(n-3)</div><h3 class="tc__nm">DHA</h3><div class="tc__fl">Dokosaheksaensyre</div>
+<p class="tc__p">Hjernens byggestein. Utgjør 40% av flerumettede fettsyrer i hjernen og 60% i netthinnen. Avgjørende for hjerneutvikling hos foster, og kognitiv funksjon gjennom hele livet.</p>
+<div class="tc__sr"><strong>Kilder:</strong> Fet fisk, algeolje, tran</div>
+</div>
+<div class="tc r rd2">
+<div class="tc__ic tc__ic--c"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 22c0-8 4-15 7-18 3 3 7 10 7 18"/><path d="M14 22V9"/><path d="M10 17c2-1 4-1 8 0" opacity=".4"/></svg></div>
+<div class="tc__cd">ALA · 18:3(n-3)</div><h3 class="tc__nm">ALA</h3><div class="tc__fl">Alfa-linolensyre</div>
+<p class="tc__p">Plantebasert forløper. Kan konverteres til EPA og DHA, men konverteringsraten er svært lav (under 5-10% for EPA, under 1% for DHA). Brukes primært som energikilde.</p>
+<div class="tc__sr"><strong>Kilder:</strong> Linfrø, chiafrø, valnøtter, rapsolje</div>
+</div>
+</div>
+</div></section>
+
+<!-- HEALTH BENEFITS -->
+<section class="sec sec--g" id="helse">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Dokumenterte helseeffekter</div><h2 class="sec__hd">Hvorfor kroppen trenger <em>Omega-3</em></h2><p class="sec__ds">Tiår med forskning har avdekket en imponerende bredde av biologiske effekter — kategorisert etter vitenskapelig evidensgrad.</p></div>
+<div class="bwrap">
+<div class="bc r"><div class="bc__ic bc__ic--hr"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 22s-8-5.5-8-11a5 5 0 0110 0 5 5 0 0110 0c0 5.5-8 11-8 11z" fill="currentColor" opacity=".08"/><path d="M13 22s-8-5.5-8-11a5 5 0 0110 0 5 5 0 0110 0c0 5.5-8 11-8 11z"/></svg></div><h3 class="bc__tt">Hjerte og kretsløp</h3><p class="bc__tx">Senker triglyserider 15-30%. Reduserer blodtrykk. Hemmer blodplateaggregering. Stabiliserer hjerterytme. Metaanalyser viser redusert risiko for hjerteinfarkt.</p><span class="bc__tg tg--s">Sterk evidens</span></div>
+<div class="bc r rd1"><div class="bc__ic bc__ic--br"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 3C8 3 5 7 5 11c0 3 1 5 3 7l1 5h8l1-5c2-2 3-4 3-7 0-4-3-8-8-8z"/><path d="M9 23h8M13 10v6M10 13h6" opacity=".3"/></svg></div><h3 class="bc__tt">Hjerne og kognisjon</h3><p class="bc__tx">DHA er strukturelt essensielt for nevronal signaloverføring. Knyttet til bedre kognitiv funksjon, hukommelse og redusert risiko for demens.</p><span class="bc__tg tg--s">Sterk evidens</span></div>
+<div class="bc r rd2"><div class="bc__ic bc__ic--ey"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 13s4-7 11-7 11 7 11 7-4 7-11 7S2 13 2 13z"/><circle cx="13" cy="13" r="3"/></svg></div><h3 class="bc__tt">Syn og øyehelse</h3><p class="bc__tx">DHA utgjør over 50% av netthinnas fettsyrer. Reduserer risiko for aldersrelatert makuladegenerasjon og lindrer tørre øyne.</p><span class="bc__tg tg--s">Sterk evidens</span></div>
+<div class="bc r rd1"><div class="bc__ic bc__ic--jt"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="13" cy="8" r="4"/><circle cx="13" cy="18" r="4"/><path d="M13 12v2"/><path d="M9 8H6M20 8h-3M9 18H6M20 18h-3" opacity=".4"/></svg></div><h3 class="bc__tt">Betennelse og ledd</h3><p class="bc__tx">Omdannes til resolviner og protektiner. Dokumentert symptomlindring ved revmatoid artritt — redusert stivhet og smerte.</p><span class="bc__tg tg--m">Moderat evidens</span></div>
+<div class="bc r rd2"><div class="bc__ic bc__ic--mn"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M9 11.5c0-1 1-1.5 1.5-1.5s1.5.5 1.5 1.5M14 11.5c0-1 1-1.5 1.5-1.5s1.5.5 1.5 1.5"/><path d="M9 17c1 2 3 3 4 3s3-1 4-3"/></svg></div><h3 class="bc__tt">Mental helse</h3><p class="bc__tx">Metaanalyser viser beskjeden antidepressiv effekt av EPA. Lovende som supplement til standardbehandling ved depresjon.</p><span class="bc__tg tg--m">Moderat evidens</span></div>
+<div class="bc r rd3"><div class="bc__ic bc__ic--sk"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M19 14c1.5-2 2-4 2-6 0-3-2-5-4-5-1 0-2 .5-3 2-1-1.5-2-2-3-2-2 0-4 2-4 5 0 2 .5 4 2 6"/><path d="M7 14c-1 1-2 3-2 5 0 3 3 4 5 4h6c2 0 5-1 5-4 0-2-1-4-2-5"/></svg></div><h3 class="bc__tt">Hud og barrierefunksjon</h3><p class="bc__tx">Opprettholder hudens lipidbarriere. Kan dempe psoriasis, eksem og UV-indusert inflammasjon. Støtter fuktbalansen.</p><span class="bc__tg tg--e">Fremvoksende evidens</span></div>
+<div class="bc r rd2"><div class="bc__ic bc__ic--pr"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 3v8l5 3"/><circle cx="13" cy="13" r="10"/></svg></div><h3 class="bc__tt">Gravide og foster</h3><p class="bc__tx">DHA er kritisk for fetal hjerneutvikling og synsfunksjon. Høyere inntak assosiert med lengre svangerskap og høyere fødselsvekt.</p><span class="bc__tg tg--s">Sterk evidens</span></div>
+<div class="bc r rd3"><div class="bc__ic bc__ic--im"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2l3 5h5l-4 3.5 1.5 5L13 12.5 7.5 15.5 9 10.5 5 7h5z"/></svg></div><h3 class="bc__tt">Immunforsvar</h3><p class="bc__tx">Modulerer immuncelleaktivitet. Kan redusere risiko for autoimmune sykdommer og forbedre immunrespons via SPM-produksjon.</p><span class="bc__tg tg--e">Fremvoksende evidens</span></div>
+<div class="bc r rd4"><div class="bc__ic bc__ic--mt"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 18l4-6 4 3 5-8 7 11"/><path d="M3 22h20" opacity=".3"/></svg></div><h3 class="bc__tt">Metabolsk helse</h3><p class="bc__tx">Forbedrer insulinsensitivitet. Senker triglyserider effektivt. Kan redusere leverfett ved ikke-alkoholisk fettlever (NAFLD).</p><span class="bc__tg tg--m">Moderat evidens</span></div>
+</div>
+</div></section>
+
+<!-- FOOD SOURCES -->
+<section class="sec" id="kilder">
+<div class="ctn">
+<div class="sec__top r"><div class="sec__lb">Naturlige kilder</div><h2 class="sec__hd">De rikeste <em>omega-3-kildene</em></h2><p class="sec__ds">Innholdet varierer enormt mellom matvarer. Her er en evidensbasert rangering.</p></div>
+<div class="sgrid">
+<div class="r"><table class="stbl"><thead><tr><th>Kilde</th><th>Type</th><th>Per 100g</th><th>Nivå</th></tr></thead><tbody>
+<tr><td>Tran (per 100ml)</td><td>EPA+DHA</td><td>~19 g</td><td><div class="bar"><div class="bar__f" data-w="100"></div></div></td></tr>
+<tr><td>Makrell</td><td>EPA+DHA</td><td>2,6 g</td><td><div class="bar"><div class="bar__f" data-w="90"></div></div></td></tr>
+<tr><td>Villaks</td><td>EPA+DHA</td><td>2,2 g</td><td><div class="bar"><div class="bar__f" data-w="78"></div></div></td></tr>
+<tr><td>Sild</td><td>EPA+DHA</td><td>2,0 g</td><td><div class="bar"><div class="bar__f" data-w="72"></div></div></td></tr>
+<tr><td>Sardiner</td><td>EPA+DHA</td><td>1,5 g</td><td><div class="bar"><div class="bar__f" data-w="55"></div></div></td></tr>
+<tr><td>Ansjos</td><td>EPA+DHA</td><td>1,4 g</td><td><div class="bar"><div class="bar__f" data-w="52"></div></div></td></tr>
+<tr><td>Ørret</td><td>EPA+DHA</td><td>1,0 g</td><td><div class="bar"><div class="bar__f" data-w="38"></div></div></td></tr>
+<tr><td>Linfrø</td><td>ALA</td><td>22,8 g</td><td><div class="bar"><div class="bar__f bar__f--p" data-w="100"></div></div></td></tr>
+<tr><td>Chiafrø</td><td>ALA</td><td>17,5 g</td><td><div class="bar"><div class="bar__f bar__f--p" data-w="77"></div></div></td></tr>
+<tr><td>Valnøtter</td><td>ALA</td><td>9,1 g</td><td><div class="bar"><div class="bar__f bar__f--p" data-w="40"></div></div></td></tr>
+</tbody></table></div>
+<div class="ssb r rd2">
+<div class="stip"><div class="stip__ic stip__ic--a"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2v16"/><path d="M4 3h10l-2 4 2 4H4"/></svg></div><h4 class="stip__tt">Norsk anbefaling</h4><p class="stip__tx">Helsedirektoratet anbefaler fisk 2-3 ganger per uke, hvorav minst halvparten bør være fet fisk. Det gir ca. 200-500 mg EPA+DHA daglig.</p></div>
+<div class="stip"><div class="stip__ic stip__ic--b"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 3c0 0-2 1-5 4s-5 8-5 8"/><path d="M17 3c0 0-4 0-8 3s-6 8-6 8"/><path d="M3 17l3-3"/></svg></div><h4 class="stip__tt">Vegetariansk alternativ</h4><p class="stip__tx">Algeolje gir direkte DHA uten konvertering. Produsert fra mikroalger — bærekraftig og effektivt.</p></div>
+<div class="stip"><div class="stip__ic stip__ic--c"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 2v16M3 6l7-2 7 2M3 6l1 6h4l1-6M13 6l1 6h4l1-6"/></svg></div><h4 class="stip__tt">Omega-6/3-forholdet</h4><p class="stip__tx">Ideelt: 2:1 til 4:1. Moderne kosthold: ofte 15-20:1. Øk omega-3 og reduser prosessert mat for bedre balanse.</p></div>
+</div>
+</div>
+</div></section>
+
+<!-- BIG NUMBERS -->
+<div class="bnb"><div class="ctn"><div class="bnb__row r">
+<div class="bn"><div class="bn__n">40%</div><div class="bn__l">av hjernens flerumettede fettsyrer er DHA</div></div><div class="bn__d"></div>
+<div class="bn"><div class="bn__n">60%</div><div class="bn__l">av netthinnas fettsyrer er DHA</div></div><div class="bn__d"></div>
+<div class="bn"><div class="bn__n">29%</div><div class="bn__l">redusert hjertedød i DART-studien</div></div><div class="bn__d"></div>
+<div class="bn"><div class="bn__n">8%+</div><div class="bn__l">omega-3-indeks = lavest hjerterisiko</div></div>
+</div></div></div>
+
+<!-- DOSAGE -->
+<section class="sec sec--s" id="dosering">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Anbefalte doser</div><h2 class="sec__hd">Hvor mye trenger <em>du?</em></h2><p class="sec__ds">Behovet varierer med alder, livssituasjon og helsemål. Basert på internasjonale anbefalinger.</p></div>
+<div class="dgrid">
+<div class="dc r"><div class="dc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></div><div class="dc__grp">Voksne</div><div class="dc__age">18 ar og eldre</div><div class="dc__amt">250-500 <span class="dc__u">mg EPA+DHA/dag</span></div><p class="dc__dt">Basisanbefaling fra EFSA og Helsedirektoratet for generell helsevedlikehold. Tilsvarer ca. 2 porsjoner fet fisk per uke.</p></div>
+<div class="dc r rd1"><div class="dc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M8 20c0-2 1-4 4-4s4 2 4 4"/><circle cx="12" cy="14" r="2" fill="currentColor" opacity=".12"/></svg></div><div class="dc__grp">Gravide og ammende</div><div class="dc__age">Svangerskap og amming</div><div class="dc__amt">300-700 <span class="dc__u">mg DHA+EPA/dag</span></div><p class="dc__dt">Minimum 200 mg DHA daglig for fosterets hjerneutvikling.</p><div class="dc__w"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1L1 14h14L8 1zM8 6v4M8 12h.01"/></svg>Unngå tran i store mengder pga. vitamin A-innhold.</div></div>
+<div class="dc r rd1"><div class="dc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="7" r="3"/><path d="M8 21v-1a3 3 0 013-3h2a3 3 0 013 3v1"/></svg></div><div class="dc__grp">Barn (2-18 ar)</div><div class="dc__age">Etter alder og vekt</div><div class="dc__amt">100-250 <span class="dc__u">mg EPA+DHA/dag</span></div><p class="dc__dt">Fisk, tran eller barneversjoner av omega-3. Anbefalt mengde oker med alderen.</p></div>
+<div class="dc r rd2"><div class="dc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="dc__grp">Hjerte-kar-risiko</div><div class="dc__age">Etter legens vurdering</div><div class="dc__amt">1-4 <span class="dc__u">g EPA+DHA/dag</span></div><p class="dc__dt">Hoyere doser for triglyseridsenking eller dokumentert hjertesykdom.</p><div class="dc__w"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1L1 14h14L8 1zM8 6v4M8 12h.01"/></svg>Doser over 2 g bor diskuteres med lege.</div></div>
+</div>
+</div></section>
+
+<!-- OMEGA-3 INDEX -->
+<section class="sec" id="indeks">
+<div class="ctn"><div class="idx-split">
+<div class="idx__chart r" id="idxChart">
+<svg viewBox="0 0 200 200" width="100%">
+<defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2980b9"/><stop offset="100%" stop-color="#7ec8e3"/></linearGradient></defs>
+<circle cx="100" cy="100" r="90" class="idx__ring-bg"/>
+<circle cx="100" cy="100" r="90" class="idx__ring idx__ring-fill"/>
+</svg>
+<div class="idx__center"><div class="idx__pct">5.7%</div><div class="idx__pctl">Norsk gjennomsnitt</div></div>
+</div>
+<div class="idx__body r rd2">
+<div class="sec__lb">Omega-3-indeksen</div>
+<h2 class="sec__hd">Mål din <em>status</em></h2>
+<p>Omega-3-indeksen er en blodprove som maler EPA og DHA som andel av fettsyrene i rode blodceller. Den gir et presist bilde av kroppens omega-3-status de siste 120 dagene.</p>
+<p>Forskning viser at en indeks over 8% er assosiert med 90% lavere risiko for plutselig hjertedod sammenlignet med under 4%. De fleste nordmenn ligger pa 5-6% — under optimal verdi.</p>
+<div class="idx__scale">
+<div class="idx__scale-bar"></div>
+<div class="idx__scale-labels"><span>Under 4% — Hoy risiko</span><span>4-8% — Moderat</span><span>Over 8% — Optimal</span></div>
+</div>
+</div>
+</div></div></section>
+
+<!-- RESEARCH -->
+<section class="sec sec--d" id="forskning">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Forskningsmilepæler</div><h2 class="sec__hd">50 ar med <em>evidens</em></h2><p class="sec__ds">Fra Gronland til randomiserte kliniske studier — en tidslinje over de viktigste funnene.</p></div>
+<div class="tl">
+<div class="tli r"><div class="tli__y">1970-tallet</div><h3 class="tli__tt">Bang & Dyerberg — Gronlandsstudiene</h3><p class="tli__tx">Danske forskere oppdaget ekstremt lav hjertesykdom blant inuitter pa Gronland. Forklaringen: omega-3 fra sel, hval og fisk.</p></div>
+<div class="tli r"><div class="tli__y">1989</div><h3 class="tli__tt">DART-studien</h3><p class="tli__tx">Forste store RCT: okt fiskeinntak ga 29% lavere dodelighet hos menn etter hjerteinfarkt over to ar.</p></div>
+<div class="tli r"><div class="tli__y">1999</div><h3 class="tli__tt">GISSI-Prevenzione</h3><p class="tli__tx">11 324 deltakere. 1 g EPA+DHA daglig reduserte plutselig hjertedod med 45%. Historisk milepæl.</p></div>
+<div class="tli r"><div class="tli__y">2002</div><h3 class="tli__tt">AHA anbefaler omega-3</h3><p class="tli__tx">American Heart Association gir offisiell anbefaling: fisk 2x/uke for alle, omega-3-tilskudd ved dokumentert hjertesykdom.</p></div>
+<div class="tli r"><div class="tli__y">2018</div><h3 class="tli__tt">VITAL-studien</h3><p class="tli__tx">25 871 deltakere. Omega-3 reduserte hjerteinfarktrisiko med 28%, størst effekt hos de med lavt fiskeinntak.</p></div>
+<div class="tli r"><div class="tli__y">2019</div><h3 class="tli__tt">REDUCE-IT</h3><p class="tli__tx">Banebrytende: 4 g EPA/dag reduserte hjerte-kar-hendelser med 25% hos pasienter med forhoyede triglyserider.</p></div>
+<div class="tli r"><div class="tli__y">2020+</div><h3 class="tli__tt">SPM-revolusjonen</h3><p class="tli__tx">Oppdagelsen av Specialized Pro-resolving Mediators (resolviner, protektiner, maresiner) forklarer hvordan omega-3 aktivt loser betennelse.</p></div>
+</div>
+</div></section>
+
+<!-- BIOAVAILABILITY -->
+<section class="sec sec--g" id="bio">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Biotilgjengelighet</div><h2 class="sec__hd">Ikke all omega-3 er <em>lik</em></h2><p class="sec__ds">Kjemisk form avgor hvor mye kroppen faktisk tar opp. Forskjellene er betydelige.</p></div>
+<div class="bio-row">
+<div class="biocard r"><div class="biocard__ic"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><ellipse cx="14" cy="14" rx="5" ry="9"/><path d="M14 5v18"/><path d="M9 14h10" opacity=".4"/></svg></div><h3 class="biocard__nm">Triglyserid (TG)</h3><div class="biocard__tp">Naturlig form</div><div class="biocard__bar"><div class="biocard__bf" data-w="90"></div></div><div class="biocard__pct">~90%</div><div class="biocard__pl">Relativ absorpsjon</div><p class="biocard__desc">Naturlig form i fisk og tran. Utmerket biotilgjengelighet. Kan re-esterifiseres for hoy konsentrasjon.</p></div>
+<div class="biocard r rd1"><div class="biocard__ic"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="16" height="16" rx="3"/><path d="M10 14h8M14 10v8" opacity=".4"/></svg></div><h3 class="biocard__nm">Fosfolipid (PL)</h3><div class="biocard__tp">Krillolje</div><div class="biocard__bar"><div class="biocard__bf" data-w="95"></div></div><div class="biocard__pct">~95%</div><div class="biocard__pl">Relativ absorpsjon</div><p class="biocard__desc">Fosfolipidbundet omega-3 fra krill. Mulig bedre opptak pga. amphifil struktur. Lavere dose per kapsel.</p></div>
+<div class="biocard r rd2"><div class="biocard__ic"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 3c-6 0-10 5-10 11s4 11 10 11 10-5 10-11S20 3 14 3z"/><path d="M14 8v12" opacity=".4"/><path d="M9 14h10" opacity=".4"/></svg></div><h3 class="biocard__nm">Etylester (EE)</h3><div class="biocard__tp">Konsentrert fiskeolje</div><div class="biocard__bar"><div class="biocard__bf" data-w="60"></div></div><div class="biocard__pct">~60%</div><div class="biocard__pl">Relativ absorpsjon</div><p class="biocard__desc">Syntetisk form brukt i konsentrerte produkter. Lavere biotilgjengelighet, men billigere. Ta med fettholdig mat.</p></div>
+</div>
+</div></section>
+
+<!-- MYTHS -->
+<section class="sec" id="myter">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Fakta vs. fiksjon</div><h2 class="sec__hd">Vanlige myter om <em>Omega-3</em></h2><p class="sec__ds">Vi avkrefter de mest utbredte misforstaelsene med evidensbaserte svar.</p></div>
+<div class="mlist">
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">All omega-3 er det samme</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Fakta</span><p class="mi__at">EPA, DHA og ALA har fundamentalt ulike biologiske roller. Marine EPA og DHA er direkte aktive, mens ALA ma konverteres med under 5-10% effektivitet. For hjerne og hjerte er EPA+DHA klart overlegne.</p></div></div></div>
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">Tilskudd er like bra som fisk</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Delvis sant</span><p class="mi__at">Tilskudd gir EPA og DHA, men fisk gir ogsa protein, selen, jod, vitamin D og andre synergistiske næringsstoffer. Fisk erstatter ogsa mindre sunne proteinkilder. Tilskudd er likevel et godt alternativ.</p></div></div></div>
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">Mer omega-3 er alltid bedre</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Fakta</span><p class="mi__at">Doser over 3-4 g/dag kan oke blodningsrisiko og er i noen studier assosiert med okt risiko for atrieflimmer. EFSA anser opptil 5 g/dag som trygt, men hold deg til anbefalte doser.</p></div></div></div>
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">Oppdrettslaks har ikke omega-3</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Fakta</span><p class="mi__at">Norsk oppdrettslaks inneholder fortsatt 2-3 g EPA+DHA per 150g porsjon. Nivaene har gatt noe ned pga. mer plantebasert for, men er godt over daglig minimumsbehov.</p></div></div></div>
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">Omega-3 er en mirakelkur</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Fakta</span><p class="mi__at">Dokumenterte fordeler for hjerte, hjerne og betennelse, men ingen universalkur. For kreft, diabetes type 2 og demens er evidensen blandet. Vær kritisk til overdrevne pastander.</p></div></div></div>
+</div>
+</div></section>
+
+<!-- SUPPLEMENTS -->
+<section class="sec sec--g" id="tilskudd">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Tilskuddsguide</div><h2 class="sec__hd">Velg riktig <em>tilskudd</em></h2><p class="sec__ds">En objektiv sammenligning av de fire hovedkategoriene pa markedet.</p></div>
+<div class="sgr">
+<div class="sc r"><div class="sc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2h8v4c0 2-2 3-4 3S8 8 8 6V2z"/><path d="M6 8c0 7 2 14 6 14s6-7 6-14"/><path d="M8 2h8" stroke-width="2"/></svg></div><h3 class="sc__nm">Tran</h3><div class="sc__tp">Triglyserid · Tradisjonell</div><p class="sc__dx">Det klassiske norske tilskuddet. EPA, DHA pluss vitamin A og D i naturlig triglyseridform med god absorpsjon.</p><div class="sc__pro"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 8 7 12 13 4"/></svg>Naturlig form, vitamin A+D, god tradisjon</div><div class="sc__con"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg>Begrenset EPA+DHA per dose, vitamin A kan akkumuleres</div></div>
+<div class="sc r rd1"><div class="sc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><ellipse cx="12" cy="12" rx="5" ry="8"/><path d="M12 4v16"/><path d="M7 12h10" opacity=".4"/></svg></div><h3 class="sc__nm">Konsentrert fiskeolje</h3><div class="sc__tp">Etylester / Re-esterifisert TG</div><p class="sc__dx">Renset og konsentrert. TG-form absorberes betydelig bedre enn EE-form. Sjekk etiketten.</p><div class="sc__pro"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 8 7 12 13 4"/></svg>Hoy konsentrasjon, luktfritt i kapsler</div><div class="sc__con"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg>EE-form: ~60% absorpsjon vs. ~90% for TG</div></div>
+<div class="sc r rd1"><div class="sc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2C8 2 4 6 4 11c0 4 3 8 8 11 5-3 8-7 8-11 0-5-4-9-8-9z"/><circle cx="12" cy="10" r="3" opacity=".3"/></svg></div><h3 class="sc__nm">Krillolje</h3><div class="sc__tp">Fosfolipidform</div><p class="sc__dx">Antarktisk krill. Omega-3 bundet til fosfolipider + antioksidanten astaxanthin.</p><div class="sc__pro"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 8 7 12 13 4"/></svg>Utmerket absorpsjon, astaxanthin, liten kapsel</div><div class="sc__con"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg>Lav EPA+DHA per kapsel, dyrt, skalldyrallergi</div></div>
+<div class="sc r rd2"><div class="sc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2c-4 3-6 7-6 11a6 6 0 0012 0c0-4-2-8-6-11z"/><path d="M12 8v6M9 11h6" opacity=".3"/></svg></div><h3 class="sc__nm">Algeolje</h3><div class="sc__tp">Triglyserid · Plantebasert</div><p class="sc__dx">Eneste plantebaserte kilde til direkte DHA og EPA. Fra mikroalger. Bærekraftig produksjon.</p><div class="sc__pro"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 8 7 12 13 4"/></svg>Plantebasert, bærekraftig, ingen fiskelukt</div><div class="sc__con"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg>Ofte lavere EPA, noe dyrere</div></div>
+</div>
+<div class="ctbl-w r"><table class="ctbl"><thead><tr><th>Egenskap</th><th>Tran</th><th>Fiskeolje (TG)</th><th>Fiskeolje (EE)</th><th>Krillolje</th><th>Algeolje</th></tr></thead><tbody>
+<tr><td><strong>EPA+DHA/dose</strong></td><td>400-600 mg</td><td class="hl">600-1000 mg</td><td>500-900 mg</td><td>200-350 mg</td><td>300-500 mg</td></tr>
+<tr><td><strong>Absorpsjon</strong></td><td>God</td><td class="hl">Svært god</td><td>Moderat</td><td>Svært god</td><td>God</td></tr>
+<tr><td><strong>Vegetarisk</strong></td><td>Nei</td><td>Nei</td><td>Nei</td><td>Nei</td><td class="hl">Ja</td></tr>
+<tr><td><strong>Ekstra</strong></td><td>Vit. A & D</td><td>---</td><td>---</td><td>Astaxanthin</td><td>---</td></tr>
+</tbody></table></div>
+</div></section>
+
+<!-- SAFETY -->
+<section class="sec sec--s" id="sikkerhet">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Sikkerhet og interaksjoner</div><h2 class="sec__hd">Viktig a vite for <em>trygg bruk</em></h2><p class="sec__ds">Omega-3 er generelt trygt, men det finnes viktige forholdsregler og interaksjoner a kjenne til.</p></div>
+<div class="safety-grid">
+<div class="saf r"><div class="saf__ic saf__ic--r"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11 2L2 19h18L11 2z"/><path d="M11 8v5M11 15h.01"/></svg></div><h3 class="saf__tt">Blodfortynnende</h3><p class="saf__tx">Omega-3 har mild antitrombotisk effekt. Informer legen ved warfarin-bruk. Seponering 1-2 uker for planlagte operasjoner kan vurderes ved hoye doser.</p></div>
+<div class="saf r rd1"><div class="saf__ic saf__ic--y"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="9"/><path d="M11 7v4l3 2"/></svg></div><h3 class="saf__tt">Oksidert fiskeolje</h3><p class="saf__tx">Harsk fiskeolje inneholder skadelige oksidasjonsprodukter. Oppbevar kjølig og morkt. Test: lukt og smak for rarshet. Kast ved harsk lukt.</p></div>
+<div class="saf r rd2"><div class="saf__ic saf__ic--g"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11 2l2.5 5H19l-4.5 3.5L16 16l-5-3.5L6 16l1.5-5.5L3 7h5.5z"/></svg></div><h3 class="saf__tt">Kvalitetsmerking</h3><p class="saf__tx">Se etter IFOS 5-stjerners sertifisering, Friends of the Sea, eller MSC-merking. Disse garanterer renhet, ferskhet og bærekraft.</p></div>
+<div class="saf r"><div class="saf__ic saf__ic--r"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="5" width="16" height="14" rx="2"/><path d="M7 2v5M15 2v5M3 10h16"/></svg></div><h3 class="saf__tt">Vitamin A i tran</h3><p class="saf__tx">Tran inneholder vitamin A som kan akkumuleres. Gravide bor velge ren omega-3 uten A-vitamin. Maks 1 ss tran/dag for voksne.</p></div>
+<div class="saf r rd1"><div class="saf__ic saf__ic--y"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="9"/><path d="M8 8l6 6M14 8l-6 6"/></svg></div><h3 class="saf__tt">Allergier</h3><p class="saf__tx">Fiskeolje: forsiktighet ved fiskeallergi (sjelden kryssreaksjon). Krillolje: unnga ved skalldyrallergi. Algeolje er allergensikkert alternativ.</p></div>
+<div class="saf r rd2"><div class="saf__ic saf__ic--g"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 11c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8"/><path d="M3 11h4M11 3v4"/><circle cx="11" cy="11" r="2"/></svg></div><h3 class="saf__tt">Tungmetaller</h3><p class="saf__tx">Kvalitetsprodusenter renser via molekylær destillasjon. Smaafisk (sardiner, ansjos) har naturlig lavere kvikksolv. Sjekk analysesertifikater.</p></div>
+</div>
+</div></section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+<div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Ofte stilte sporsmaal</div><h2 class="sec__hd">Sporsmal og <em>svar</em></h2></div>
+<div class="fgrid">
+<div class="fq r"><h3 class="fq__q">Nar bor jeg ta omega-3?</h3><p class="fq__a">Alltid med et fettholdig maltid for optimal absorpsjon. Tidspunkt pa dagen spiller liten rolle — konsistens er viktigere.</p></div>
+<div class="fq r rd1"><h3 class="fq__q">Kan jeg ta for mye?</h3><p class="fq__a">EFSA anser opptil 5 g EPA+DHA daglig som trygt. Svært hoye doser kan gi GI-plager og okt blodningsrisiko.</p></div>
+<div class="fq r"><h3 class="fq__q">Hva er omega-3-indeksen?</h3><p class="fq__a">Blodprove som maler EPA+DHA i rode blodceller. Over 8% er optimalt. Kan bestilles hos enkelte legekontorer.</p></div>
+<div class="fq r rd1"><h3 class="fq__q">Hjelper det mot leddsmerter?</h3><p class="fq__a">2-3 g/dag kan redusere smerter ved revmatoid artritt etter 2-3 maneder. Svakere evidens for artrose.</p></div>
+<div class="fq r"><h3 class="fq__q">Fiskeolje vs. algeolje?</h3><p class="fq__a">Begge gir EPA+DHA. Algeolje er plantebasert og bærekraftig, men ofte lavere EPA. Fiskeolje gir bredere fettsyreprofil.</p></div>
+<div class="fq r rd1"><h3 class="fq__q">Hvordan oppbevare?</h3><p class="fq__a">Kjølig, morkt og tørt. Apnet tran i kjoleskap, bruk innen 3 mnd. Harsk = oksidert = kast det.</p></div>
+<div class="fq r"><h3 class="fq__q">Er omega-3 trygt med medisiner?</h3><p class="fq__a">Generelt ja. Forsiktighet med blodfortynnende (warfarin). Informer alltid legen om tilskuddsbruk.</p></div>
+<div class="fq r rd1"><h3 class="fq__q">Trenger barn omega-3?</h3><p class="fq__a">Ja — DHA er kritisk for hjerneutvikling. Fisk, tran eller barnetilpassede tilskudd anbefales.</p></div>
+</div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta"><div class="ctn" style="position:relative"><div class="r">
+<h2 class="cta__t">Din helse. Din kunnskap.</h2>
+<p class="cta__p">Omega-3.no er en uavhengig, evidensbasert kunnskapsplattform. Vi mottar ingen stotte fra supplement-produsenter.</p>
+<a href="#topp" class="btn btn--w">Tilbake til toppen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg></a>
+</div></div></section>
+
+<!-- FOOTER -->
+<footer class="ft"><div class="ctn">
+<div class="ft__g">
+<div><a href="#" class="nav__l" style="margin-bottom:.5rem"><div class="nav__lm"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M3 17C6 12 9 9 12 8c3-1 6 0 9 4"/><path d="M3 14C6 10 10 7 13 7c3 0 5 1 8 4" opacity=".5"/></svg></div>Omega-3.no</a><p class="ft__bt">Norges mest omfattende kunnskapsbase om omega-3 fettsyrer. Uavhengig, evidensbasert og fritt tilgjengelig.</p></div>
+<div class="ft__c"><h4>Kunnskap</h4><a href="#hva-er">Hva er Omega-3</a><a href="#typer">EPA, DHA & ALA</a><a href="#mekanisme">Virkningsmekanisme</a><a href="#helse">Helseeffekter</a><a href="#kilder">Matkilder</a></div>
+<div class="ft__c"><h4>Verktoy</h4><a href="#dosering">Doseringsguide</a><a href="#indeks">Omega-3-indeksen</a><a href="#bio">Biotilgjengelighet</a><a href="#tilskudd">Tilskuddsguide</a><a href="#sikkerhet">Sikkerhet</a></div>
+<div class="ft__c"><h4>Ressurser</h4><a href="#forskning">Forskning</a><a href="#myter">Myter</a><a href="#faq">FAQ</a><a href="https://www.helsedirektoratet.no" target="_blank" rel="noopener">Helsedirektoratet</a><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener">PubMed</a></div>
+</div>
+<div class="ft__b"><div class="ft__cp">&copy; 2026 Omega-3.no — Alle rettigheter reservert</div><div class="ft__dis">Informasjonen erstatter ikke profesjonell medisinsk radgivning. Kontakt helsepersonell ved sporsmal om din helse.</div></div>
+</div></footer>
+
+<button class="btt" id="btt" aria-label="Til toppen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg></button>
+
+<script>
+const nav=document.getElementById('nav'),btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{nav.classList.toggle('s',scrollY>60);btt.classList.toggle('vi',scrollY>500)});
+btt.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+const hb=document.getElementById('hb'),nk=document.getElementById('nk');
+hb.addEventListener('click',()=>{hb.classList.toggle('o');nk.classList.toggle('op')});
+nk.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nk.classList.remove('op');hb.classList.remove('o')}));
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');obs.unobserve(x.target)}})},{threshold:.06,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+const bobs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.width=x.target.dataset.w+'%';bobs.unobserve(x.target)}})},{threshold:.2});
+document.querySelectorAll('.bar__f,.biocard__bf').forEach(b=>bobs.observe(b));
+const iobs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('animated');iobs.unobserve(x.target)}})},{threshold:.3});
+const ic=document.getElementById('idxChart');if(ic)iobs.observe(ic);
+function tM(b){const m=b.closest('.mi'),o=m.classList.contains('o');document.querySelectorAll('.mi').forEach(x=>x.classList.remove('o'));if(!o)m.classList.add('o')}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)scrollTo({top:t.getBoundingClientRect().top+scrollY-80,behavior:'smooth'})})});
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Omega-3.no","url":"https://omega-3.no","description":"Norges storste kunnskapsbase om omega-3 fettsyrer.","inLanguage":"nb-NO"}</script>
+</body>
+</html>
