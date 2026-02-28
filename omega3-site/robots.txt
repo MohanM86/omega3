@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://omega-3.no/sitemap.xml
