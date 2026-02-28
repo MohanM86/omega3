@@ -207,11 +207,11 @@ img{max-width:100%;display:block}
 /* ========= BIG NUMBER BANNER ========= */
 .bnb{background:var(--d);padding:clamp(3rem,6vw,5rem) 0;overflow:hidden;position:relative}
 .bnb::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(61,160,227,.06),transparent)}
-.bnb__row{display:flex;justify-content:center;gap:clamp(2rem,5vw,5rem);flex-wrap:wrap;position:relative}
+.bnb__row{display:grid;grid-template-columns:1fr 1fr;gap:3rem 5rem;justify-items:center;position:relative}
 .bn{text-align:center}
 .bn__n{font-family:var(--fh);font-weight:800;font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.04em;background:linear-gradient(135deg,var(--b3),var(--b4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
 .bn__l{font-size:.78rem;color:var(--tw4);margin-top:.3rem;font-weight:300;max-width:150px}
-.bn__d{width:1px;height:60px;background:rgba(255,255,255,.06);align-self:center}
+.bn__d{display:none}
 
 /* ========= OMEGA-3 INDEX (NEW) ========= */
 .idx-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,5vw,6rem);align-items:center}
@@ -689,6 +689,7 @@ img{max-width:100%;display:block}
 <a href="/om-oss"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Om oss</a>
 <a href="/personvern"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Personvern</a>
 <a href="https://it-firma.no" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>IT-FIRMA.no</a>
+<a href="https://vitamind.no" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>VitaminD.no</a>
 </div>
 </div>
 
@@ -706,6 +707,7 @@ img{max-width:100%;display:block}
 <div class="ft__badge-ic ft__badge-ic--no"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2v16"/><path d="M4 3h10l-2 4 2 4H4"/></svg></div>
 <div class="ft__badge-tx"><strong>Norsk</strong>Laget i Norge av IT-FIRMA</div>
 </div>
+<a href="https://vitamind.no" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.8rem;padding:.8rem 1.5rem;border-radius:12px;background:rgba(245,166,35,.04);border:1px solid rgba(245,166,35,.1);text-decoration:none;transition:all .3s"><div class="ft__badge-ic" style="background:rgba(245,166,35,.08)"><svg viewBox="0 0 20 20" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="4"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2"/></svg></div><div class="ft__badge-tx"><strong style="color:#f5a623">VitaminD.no</strong>Var sosterside</div></a>
 </div>
 
 <!-- BOTTOM -->
