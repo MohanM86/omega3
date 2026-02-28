@@ -10,6 +10,10 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://omega-3.no">
 <link rel="canonical" href="https://omega-3.no">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -312,15 +316,38 @@ img{max-width:100%;display:block}
 .cta__p{font-family:var(--fd);font-size:1.05rem;color:var(--tw6);max-width:520px;margin:0 auto 2.5rem;position:relative;font-weight:300;line-height:1.8;font-style:italic}
 
 /* ========= FOOTER ========= */
-.ft{background:var(--d);border-top:1px solid rgba(255,255,255,.03);padding:4rem 0 2.5rem}
-.ft__g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-.ft__bt{font-size:.82rem;color:var(--tw4);line-height:1.7;margin-top:.7rem;font-weight:300}
-.ft__c h4{font-family:var(--fm);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tw4);font-weight:500;margin-bottom:1.2rem}
-.ft__c a{display:block;color:var(--tw4);text-decoration:none;font-size:.85rem;margin-bottom:.5rem;font-weight:300;transition:color .2s}
-.ft__c a:hover{color:var(--tw)}
-.ft__b{padding-top:2rem;border-top:1px solid rgba(255,255,255,.03);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.ft__cp{font-size:.75rem;color:var(--tw4);font-weight:300}
-.ft__dis{font-size:.7rem;color:rgba(255,255,255,.18);max-width:450px;text-align:right;line-height:1.5;font-weight:300}
+.ft{background:var(--d);position:relative;overflow:hidden}
+.ft__glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(61,160,227,.06),transparent 70%);pointer-events:none}
+.ft__top{padding:5rem 0 3rem;border-bottom:1px solid rgba(255,255,255,.04);display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:3rem;position:relative}
+.ft__brand{max-width:320px}
+.ft__brand-logo{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+.ft__brand-logo span{font-family:var(--fh);font-weight:700;font-size:1.2rem;color:#fff;letter-spacing:-.02em}
+.ft__bt{font-size:.85rem;color:var(--tw4);line-height:1.8;font-weight:300;margin-bottom:1.5rem}
+.ft__itfirma{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1.2rem;border-radius:10px;background:rgba(61,160,227,.06);border:1px solid rgba(61,160,227,.1);text-decoration:none;transition:all .4s var(--eo)}
+.ft__itfirma:hover{background:rgba(61,160,227,.12);border-color:rgba(61,160,227,.2);transform:translateY(-2px)}
+.ft__itfirma-badge{font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--b3);font-weight:500;line-height:1}
+.ft__itfirma-name{font-family:var(--fh);font-weight:700;font-size:.95rem;color:#fff;letter-spacing:-.01em}
+.ft__itfirma-arrow{width:14px;height:14px;color:var(--b3);margin-left:.3rem;transition:transform .3s}
+.ft__itfirma:hover .ft__itfirma-arrow{transform:translateX(3px)}
+.ft__c h4{font-family:var(--fm);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tw4);font-weight:500;margin-bottom:1.2rem}
+.ft__c a{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.35);text-decoration:none;font-size:.88rem;margin-bottom:.7rem;font-weight:300;transition:all .3s var(--eo);padding:.15rem 0}
+.ft__c a:hover{color:#fff;transform:translateX(4px)}
+.ft__c a svg{width:14px;height:14px;opacity:.3;transition:opacity .3s}
+.ft__c a:hover svg{opacity:.7}
+.ft__mid{padding:2.5rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;position:relative}
+.ft__badge{display:flex;align-items:center;gap:.8rem;padding:.8rem 1.5rem;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04)}
+.ft__badge-ic{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center}
+.ft__badge-ic svg{width:18px;height:18px}
+.ft__badge-ic--ev{background:rgba(80,190,170,.08)}.ft__badge-ic--ev svg{color:#50beaa}
+.ft__badge-ic--in{background:rgba(140,100,200,.08)}.ft__badge-ic--in svg{color:#8c64c8}
+.ft__badge-ic--no{background:rgba(61,160,227,.08)}.ft__badge-ic--no svg{color:var(--b4)}
+.ft__badge-tx{font-size:.78rem;color:var(--tw4);line-height:1.3}
+.ft__badge-tx strong{display:block;color:var(--tw6);font-weight:500;font-size:.82rem}
+.ft__bot{padding:2rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;position:relative}
+.ft__cp{font-size:.75rem;color:rgba(255,255,255,.25);font-weight:300}
+.ft__cp a{color:var(--b3);text-decoration:none;font-weight:500}
+.ft__cp a:hover{text-decoration:underline}
+.ft__dis{font-size:.68rem;color:rgba(255,255,255,.15);max-width:450px;text-align:right;line-height:1.6;font-weight:300}
 
 /* ========= BACK TO TOP ========= */
 .btt{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--b5);color:#fff;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s var(--eo);z-index:999;box-shadow:0 4px 24px var(--ag)}
@@ -333,7 +360,7 @@ img{max-width:100%;display:block}
 .nav__k{display:none}.nav__h{display:block}
 .nav__k.op{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(6,13,24,.97);backdrop-filter:blur(30px);padding:2rem 1.5rem;gap:1.2rem}
 .intro,.idx-split{grid-template-columns:1fr}.trow,.bwrap,.sgrid,.dgrid,.sgr,.fgrid,.safety-grid,.hw-grid,.bio-row{grid-template-columns:1fr}
-.ft__g{grid-template-columns:1fr 1fr}.hero__btns{flex-direction:column;align-items:center}
+.ft__g{grid-template-columns:1fr 1fr}.ft__top{grid-template-columns:1fr 1fr}.hero__btns{flex-direction:column;align-items:center}
 }
 </style>
 </head>
@@ -623,15 +650,71 @@ img{max-width:100%;display:block}
 </div></div></section>
 
 <!-- FOOTER -->
-<footer class="ft"><div class="ctn">
-<div class="ft__g">
-<div><a href="#" class="nav__l" style="margin-bottom:.5rem"><div class="nav__lm"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M3 17C6 12 9 9 12 8c3-1 6 0 9 4"/><path d="M3 14C6 10 10 7 13 7c3 0 5 1 8 4" opacity=".5"/></svg></div>Omega-3.no</a><p class="ft__bt">Norges mest omfattende kunnskapsbase om omega-3 fettsyrer. Uavhengig, evidensbasert og fritt tilgjengelig.</p></div>
-<div class="ft__c"><h4>Kunnskap</h4><a href="#hva-er">Hva er Omega-3</a><a href="#typer">EPA, DHA & ALA</a><a href="#mekanisme">Virkningsmekanisme</a><a href="#helse">Helseeffekter</a><a href="#kilder">Matkilder</a></div>
-<div class="ft__c"><h4>Verktoy</h4><a href="#dosering">Doseringsguide</a><a href="#indeks">Omega-3-indeksen</a><a href="#bio">Biotilgjengelighet</a><a href="#tilskudd">Tilskuddsguide</a><a href="#sikkerhet">Sikkerhet</a></div>
-<div class="ft__c"><h4>Ressurser</h4><a href="#forskning">Forskning</a><a href="#myter">Myter</a><a href="#faq">FAQ</a><a href="https://www.helsedirektoratet.no" target="_blank" rel="noopener">Helsedirektoratet</a><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener">PubMed</a></div>
+<footer class="ft">
+<div class="ft__glow"></div>
+<div class="ctn">
+<!-- TOP -->
+<div class="ft__top">
+<div class="ft__brand">
+<div class="ft__brand-logo">
+<div class="nav__lm"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M3 17C6 12 9 9 12 8c3-1 6 0 9 4"/><path d="M3 14C6 10 10 7 13 7c3 0 5 1 8 4" opacity=".5"/></svg></div>
+<span>Omega-3.no</span>
 </div>
-<div class="ft__b"><div class="ft__cp">&copy; 2026 Omega-3.no — Alle rettigheter reservert</div><div class="ft__dis">Informasjonen erstatter ikke profesjonell medisinsk radgivning. Kontakt helsepersonell ved sporsmal om din helse.</div></div>
-</div></footer>
+<p class="ft__bt">Norges mest omfattende kunnskapsbase om omega-3 fettsyrer. Uavhengig, evidensbasert og fritt tilgjengelig for alle.</p>
+<a href="https://it-firma.no" target="_blank" rel="noopener" class="ft__itfirma">
+<div>
+<div class="ft__itfirma-badge">Et prosjekt av</div>
+<div class="ft__itfirma-name">IT-FIRMA</div>
+</div>
+<svg class="ft__itfirma-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+</a>
+</div>
+<div class="ft__c"><h4>Kunnskap</h4>
+<a href="/epa"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>EPA-guiden</a>
+<a href="/dha"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>DHA-guiden</a>
+<a href="/ala"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>ALA-guiden</a>
+<a href="/helseeffekter"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Helseeffekter</a>
+<a href="/hjertehelse"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Hjertehelse</a>
+</div>
+<div class="ft__c"><h4>Verktoy</h4>
+<a href="/dosering"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Doseringsguide</a>
+<a href="/omega-3-indeks"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Omega-3-indeksen</a>
+<a href="/tilskudd"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Tilskuddsguide</a>
+<a href="/gravide"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>For gravide</a>
+<a href="/barn"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>For barn</a>
+</div>
+<div class="ft__c"><h4>Ressurser</h4>
+<a href="/forskning"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Forskning</a>
+<a href="/myter"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Myter</a>
+<a href="/om-oss"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Om oss</a>
+<a href="/personvern"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Personvern</a>
+<a href="https://it-firma.no" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>IT-FIRMA.no</a>
+</div>
+</div>
+
+<!-- BADGES -->
+<div class="ft__mid">
+<div class="ft__badge">
+<div class="ft__badge-ic ft__badge-ic--ev"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 2l2.5 4H17l-3.5 3L15 14l-5-3-5 3 1.5-5L3 6h4.5z"/></svg></div>
+<div class="ft__badge-tx"><strong>Evidensbasert</strong>Kvalitetssikret innhold</div>
+</div>
+<div class="ft__badge">
+<div class="ft__badge-ic ft__badge-ic--in"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg></div>
+<div class="ft__badge-tx"><strong>Uavhengig</strong>Ingen kommersielle bindinger</div>
+</div>
+<div class="ft__badge">
+<div class="ft__badge-ic ft__badge-ic--no"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2v16"/><path d="M4 3h10l-2 4 2 4H4"/></svg></div>
+<div class="ft__badge-tx"><strong>Norsk</strong>Laget i Norge av IT-FIRMA</div>
+</div>
+</div>
+
+<!-- BOTTOM -->
+<div class="ft__bot">
+<div class="ft__cp">&copy; 2026 Omega-3.no &mdash; Utviklet av <a href="https://it-firma.no" target="_blank" rel="noopener">IT-FIRMA</a></div>
+<div class="ft__dis">Informasjonen pa denne siden erstatter ikke profesjonell medisinsk radgivning. Kontakt helsepersonell ved sporsmal om din helse.</div>
+</div>
+</div>
+</footer>
 
 <button class="btt" id="btt" aria-label="Til toppen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg></button>
 
